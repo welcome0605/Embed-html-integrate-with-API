@@ -1,0 +1,31 @@
+navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #005197 !important;
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+    font-size: 25px;
+}
+
+.div_right input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.div_right button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.div_right {
+    float: right;
+}

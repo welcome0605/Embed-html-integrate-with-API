@@ -1,0 +1,9 @@
+navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #005197 !important;
+    color: white;
+}
+
+navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:active {
+    background-color: #005197 !important;
+    color: white;
+}

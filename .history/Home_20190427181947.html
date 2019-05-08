@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CITIZEN DISABILITY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" type = "text/css" href = "./css/base.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      for(i = 1;i <= 31;i ++) {
+        str = "";
+        str += "<option value=";
+        str += i;
+        str += ">";
+        str += i;
+        str += "</option>";
+        // console.log(str);
+        $('#day').append(str);
+      }
+
+      for(i = 1919;i <= 2025; i ++) {
+        str = "";
+        str += "<option value=";
+        str += i;
+        str += ">";
+        str += i;
+        str += "</option>";
+        $('#year').append(str);
+      }
+
+      $(".btn_sub").click(function(){
+        if ($('input[name=valid1]:checked').length = 0) {
+            // do something here
+            // console.log("checked");
+        }
+        else {
+
+        }
+        // if(document.getElementById("a1").checked) {
+        //   console.log("a1");
+        // }
+        // else if(document.getElementById("a2").checked) {
+        //   console.log("a2");
+        // }
+      });
+    });
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-info">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Home.html">CITIZEN DISABILITY</a>
+    </div>
+    <ul class="nav navbar-nav div_right">
+      <li class="active"><a href="Home.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Benifits.html">Benifits</a></li>
+      <li><a href="Application Process.html">Application Process</a></li>
+      <li><a href="Careers.html">Careers</a></li>
+      <li><a href="Contact Us.html">Contact Us</a></li>
+      <!-- <input type="text" placeholder="Search.." name="search"> -->
+      <button type="button"><i class="fa fa-search"></i></button>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <!-- <h3>Basic Navbar Example1</h3>
+  <p>A navigation bar is a navigation header that is placed at the top of the page.</p> -->
+  <form method="POST">
+    <!-- <div class="div_entire"> -->
+      <div class="row"><h2 class="title">Find out if you qualify</h2></div>
+      <div class="row radio_buttons" >
+        <div class="row">
+          <div class="col-md-6 div_label">Do you expect to be out of work for at least a year?</div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5 btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-info radio_q"><input type="radio"  value="Yes" name="valid1" class="form_input valid1" id="a1">Yes</label>
+            <label class="btn btn-info radio_q"><input type="radio"  value="No" name="valid1"  class="form_input valid1" id="a2">No</label>
+          </div>
+        </div>
+        <div class="row alert_req">
+          <div class="col-md-7"></div>
+          <div class="alert alert-warning col-md-5 alert1 ">
+            This field is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="row radio_buttons" >
+        <div class="row">
+          <div class="col-md-6 div_label">Since 2013 have you worked at least 5 years?</div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5 btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-info radio_q"><input type="radio"  value="Yes"  class="form_input valid" >Yes</label>
+            <label class="btn btn-info radio_q"><input type="radio"  value="No"  class="form_input valid" >No</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7"></div>
+          <div class="alert alert-warning col-md-5 alert2 alert_req">
+            This field is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="row radio_buttons" >
+        <div class="row">
+          <div class="col-md-6 div_label">Are you currently receiving Social Security Disability benefits?</div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5 btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-info radio_q"><input type="radio"  value="Yes"  class="form_input valid" >Yes</label>
+            <label class="btn btn-info radio_q"><input type="radio"  value="No"  class="form_input valid" >No</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7"></div>
+          <div class="alert alert-warning col-md-5 alert3 alert_req">
+            This field is required.
+          </div>
+        </div>
+      </div>
+      <div class="row radio_buttons" >
+        <div class="row">
+          <div class="col-md-6 div_label">Is an attorney helping you with your case?</div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5 btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-info radio_q"><input type="radio"  value="Yes"  class="form_input valid" >Yes</label>
+            <label class="btn btn-info radio_q"><input type="radio"  value="No"  class="form_input valid" >No</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7"></div>
+          <div class="alert alert-warning col-md-5 alert4 alert_req">
+            This field is required.
+          </div>
+        </div>
+      </div>
+      <div class="row radio_buttons" >
+        <div class="row">
+          <div class="col-md-6 div_label">Are you receiving treatment from a Doctor?</div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5 btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-info radio_q"><input type="radio"  value="Yes"  class="form_input valid" >Yes</label>
+            <label class="btn btn-info radio_q"><input type="radio"  value="No"  class="form_input valid" >No</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7"></div>
+          <div class="alert alert-warning col-md-5 alert5 alert_req">
+            This field is required.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <div class="col-md-6 div_label">Date of Birth</div>
+          <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <select class="form-control" id="month">
+              <option value="month">Month</option>
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">Mar</option>
+              <option value="Apr">Apr</option>
+              <option value="May">May</option>
+              <option value="Jun">Jun</option>
+              <option value="Jly">Jly</option>
+              <option value="Aug">Aug</option>
+              <option value="Sep">Sep</option>
+              <option value="Oct">Oct</option>
+              <option value="Nov">Nov</option>
+              <option value="Dec">Dec</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <select class="form-control" id="day">
+              <option value="day">Day</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <select class="form-control" id="year">
+              <option value="year">Year</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7"></div>
+          <div class="alert alert-warning col-md-5 alert5">
+            This field is required.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7"></div>
+        <!-- <div class="col-md-4 btn_submit"><input type="submit" class="btn_sub btn btn-success" value="Next"></div> -->
+        <div class="col-md-4 btn_submit"><input type="button" class="btn_sub btn btn-success" value="Next"></div>
+      </div>
+      <!-- <input type="submit" value="Submit"> -->
+    <!-- </div> -->
+  </form>
+</div>
+
+</body>
+</html>

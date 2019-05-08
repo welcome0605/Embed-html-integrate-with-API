@@ -1,0 +1,238 @@
+Outbound Lead Post Template
+{
+    "mktrefid": "uuid",
+    "source": "value of fsource from querystring",
+    "firstname": "value entered in first name",
+    "lastname": "value entered in last name",
+    "zip": "value entered in zip zode",
+    "ph1": "value entered in phone",
+    "age": "age selected on form",
+    "email": "email enetered on form",
+    "disposition": "static value",
+    "wls": "Value provided by citizens",
+    "disdesc","Text entered from Describe Your Disability",
+    "consent","By selecting this checkbox .....",
+    "ip":"THE USER'S IP ADDRESS",
+    "url":"URL OF THE FORM",
+    "utm_campaign":"value parsed from querystring",
+    "utm_content":"value parsed from querystring",
+    "utm_source":"value parsed from querystring",
+    "utm_term":"value parsed from querystring",
+    "ad_querystring":"the querystring",
+    "ad_group":"value parsed from querystring",
+    "ad_keywords":"value parsed from querystring",
+    "ad_keywords_match_type":"value parsed from querystring",
+    "conversion_page":"value parsed from querystring",
+    "gclid":"value parsed from querystring",
+    "serp_position":"value parsed from querystring",
+    "oppid":"12"
+}
+Outbound Lead Post Example
+{
+    "mktrefid": "3bf26586-3fc9-46d7-9abf-2cf89208f6ba",
+    "source": "a0l30000003Kb7G",
+    "firstname": "Steve",
+    "lastname": "Test",
+    "zip": "02451",
+    "ph1": "7817958683",
+    "age": "54",
+    "email": "sweaver@citizensdisability.com",
+    "disposition": "CPD",
+    "dqq": "",
+    "wls": "Citizens-new-form",
+    "disdesc","I have pain and I can not work",
+    "consent","By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications. I understand these communications may be generated using an autodialer and may contain pre-recorded messages and that consent is not required to utilize Citizens Disability Network's services. I understand that this authorization overrides any previous registrations on a federal or state Do Not Call registry.",
+    "ip":"127.0.0.1",
+    "url":"https://www.citizensdisability.com/new-form",
+    "utm_campaign":"168",
+    "utm_content":"3352",
+    "utm_medium":"cpc",
+    "utm_source":"google",
+    "utm_term":"disability benefits",
+    "ad_querystring":"fsource=a0l30000003Kb7G&utm_source=google&utm_medium=cpc&utm_campaign=168&utm_term=disability benefits&utm_content=3352&position=none&st-t=googleppc&gclid=EAIaIQobChMIvp-Sx7z14QIVQrHVCh0EAAstEAEYASAAEgK6oPD_BAE",
+    "ad_group":"SSDI Help",
+    "ad_keywords":"DISPLAY NETWORK",
+    "ad_keywords_match_type":"PHRASE",
+    "conversion_page":"/social-security-disability-income-benefits/c-form_confirmation.html",
+    "gclid":"EAIaIQobChMIvp-Sx7z14QIVQrHVCh0EAAstEAEYASAAEgK6oPD_BAE",
+    "serp_position":"none",
+    "oppid":"12"
+}
+Inbound Lead Post Template
+{
+    "refid": "uuid",
+    "mktrefid": "same uuid",
+    "source": "value of fsource from querystring",
+    "firstname": "value entered in first name",
+    "lastname": "value entered in last name",
+    "zip": "value entered in zip zode",
+    "ph1": "value entered in phone",
+    "age": "age selected on form",
+    "email": "email enetered on form",
+    "disposition": "static value",
+    "dqq","Reason determined in form logic",
+    "wls": "Value provided by citizens",
+    "disdesc","Text entered from Describe Your Disability",
+    "consent","By selecting this checkbox .....",
+    "ip":"THE USER'S IP ADDRESS",
+    "url":"URL OF THE FORM",
+    "utm_campaign":"value parsed from querystring",
+    "utm_content":"value parsed from querystring",
+    "utm_source":"value parsed from querystring",
+    "utm_term":"value parsed from querystring",
+    "ad_querystring":"the querystring",
+    "ad_group":"value parsed from querystring",
+    "ad_keywords":"value parsed from querystring",
+    "ad_keywords_match_type":"value parsed from querystring",
+    "conversion_page":"value parsed from querystring",
+    "gclid":"value parsed from querystring",
+    "serp_position":"value parsed from querystring",
+    "ccname":"Static value provided by Citizens",
+    "numdialed","Static number provided by Citizens"
+}
+Inbound Lead Post Example
+{
+    "refid": "3bf26586-3fc9-46d7-9abf-2cf89208f6ba",
+    "mktrefid": "3bf26586-3fc9-46d7-9abf-2cf89208f6ba",
+    "source": "a0l30000003Kb7G",
+    "firstname": "Steve",
+    "lastname": "Test",
+    "zip": "02451",
+    "ph1": "7817958683",
+    "age": "54",
+    "email": "sweaver@citizensdisability.com",
+    "disposition": "CPD",
+    "dqq": "IN5",
+    "wls": "Citizens-new-form",
+    "disdesc","I have pain and I can not work",
+    "consent","By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications. I understand these communications may be generated using an autodialer and may contain pre-recorded messages and that consent is not required to utilize Citizens Disability Network's services. I understand that this authorization overrides any previous registrations on a federal or state Do Not Call registry.",
+    "ip":"127.0.0.1",
+    "url":"https://www.citizensdisability.com/new-form",
+    "utm_campaign":"168",
+    "utm_content":"3352",
+    "utm_medium":"cpc",
+    "utm_source":"google",
+    "utm_term":"disability benefits",
+    "ad_querystring":"fsource=a0l30000003Kb7G&utm_source=google&utm_medium=cpc&utm_campaign=168&utm_term=disability benefits&utm_content=3352&position=none&st-t=googleppc&gclid=EAIaIQobChMIvp-Sx7z14QIVQrHVCh0EAAstEAEYASAAEgK6oPD_BAE",
+    "ad_group":"SSDI Help",
+    "ad_keywords":"DISPLAY NETWORK",
+    "ad_keywords_match_type":"PHRASE",
+    "conversion_page":"/social-security-disability-income-benefits/c-form_confirmation.html",
+    "gclid":"EAIaIQobChMIvp-Sx7z14QIVQrHVCh0EAAstEAEYASAAEgK6oPD_BAE",
+    "serp_position":"none",
+    "ccname":"FORM",
+    "numdialed":"9999999999"
+}
+
+D:/Yuri/Embed%20html%20integrate%20with%20API/Home.html?QUERYSTRING - Parse out all of the applicable variables and map them as indicated in the template
+fsource=a0l30000003Kb7G&utm_source=google&utm_medium=cpc&utm_campaign=168&utm_term=disability benefits&utm_content=3352&position=none&st-t=googleppc&gclid=EAIaIQobChMIvp-Sx7z14QIVQrHVCh0EAAstEAEYASAAEgK6oPD_BAE
+
+Which social media groups drive the most traffic?
+Which comments on your ads generate the most sales?
+Which social profiles generate the most conversions?
+Which types of updates perform best in terms of traffic/engagement?
+
+https://www.launchdigitalmarketing.com/what-are-utm-codes/
+
+
+Steve Weaver [12:58 PM]
+D:/Yuri/Embed%20html%20integrate%20with%20API/Home.html?fsource=a0l30000003Kb7G&utm_source=google&utm_medium=cpc&utm_campaign=168&utm_term=disability benefits&utm_content=3352&position=none&st-t=googleppc&gclid=EAIaIQobChMIvp-Sx7z14QIVQrHVCh0EAAstEAEYASAAEgK6oPD_BAE
+
+I need to ensure that the querystring remains intact, with the dqq= variable appended to the original querystring and _not_ superseding or replacing the original querystring
+
+925-552-8309
+\
+
+
+
+
+Byggwork Contractors SaaS Website.docx
+View In App
+
+Page 0
+Page 1
+Page 2
+Page 3
+Both Contractors
+/Realestate owners
+and Subcontractors are able to:
+Create company profile where they specify information about their
+qualifications with resume by location, trade codes, certifications & more *
+1.
+Frontpage
+user should se a ”search enginge connected to a company
+database API.
+2.
+User
+should se messege
+”Claim your company and create a profile”
+3.
+User will search with company name or organizationnummber dropdown
+menu with search results will appear.
+4.
+User will click
+”This is us
+-
+Claim company”
+5.
+User will then choose if he is a contractor
+, Real Estate owner
+or
+subcontractor
+6.
+User will get a partly prepopulated form directly from the API like:
+Name, Adress and organiszationnumber of the company he choose.
+7.
+User can manually change this later.
+8.
+User will get a prefilled form and then will input mail adress.
+9.
+If no search results is shown user will be able to type
+all forms
+manually.
+10.
+User will then confirm and get an mail activation link.
+11.
+User will then login
+using the activation link
+and be taken to company
+profile where he will be promted to check his information and add
+information on the fields that is still empty.
+12.
+A precentege bar will show how complete users company information is.
+13.
+User will be able t
+o se subscribtion and payment info.
+Project Marketplace(Bidbord)
+This is the main place on the Saas website. Here we
+will sh
+ow all request that a
+company
+user has from anothe
+r contractor or subcontractor. And here we will
+also show project market place
+with all open projects that does not require an
+invite.
+Reffernce:
+https://app.buildingconnected.com/opportunities/pipeline
+Project markeplace consist of following main
+tabs.
+1.
+Bidboar
+d
+Tab
+:
+This
+is the
+invites for project cooperation user has
+got from
+other users.
+Other user make invites when they want you to work for them
+on a construction project.
+
+Access to XMLHttpRequest at  from origin  has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource
+
+Winnie, can you try chaning the endpoint to https://2019-05-07-fps-01-dot-citizensleadapi.appspot.com/op/lead
+
+
+?fsource=a0l30000003Kb7G&position=none&st-t=googleppc&utm_content=3352&utm_medium=cpc&utm_source=google&wls=Citizens-new-form&zip=12312&disposition=IN5&refid=39dd3a3d-c0a7-4438-86d1-2187b5395fe8&source=a0l30000003Kb7G&dqq=AGE&ccname=FORM&numdialed=9999999999

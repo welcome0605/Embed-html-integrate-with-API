@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CITIZEN DISABILITY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" type = "text/css" href = "./css/base1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+    var apiUrl = "";
+    // console.log( localStorage.getItem("dqq"));
+    flagCount = 0;
+    flag = true;
+    var firstname, lastname, zip, ph1, age, email;
+    var ip="";
+    function firstNameChange() {
+        firstname = document.getElementById('firstName').value;
+        validCount = firstname.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req1').css("display","block");
+            flag = true;
+        }
+        else {
+            $('.alert_req1').css("display","none");
+            flag = false;
+        }
+    }
+
+    function lastNameChange() {
+        lastname = document.getElementById('lastName').value;
+        validCount = lastname.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req2').css("display","block");
+            flag = true;
+        }
+        else {
+            $('.alert_req2').css("display","none");
+            flag = false;
+        }
+    }
+
+    function zipNameChange() {
+        zip = document.getElementById('zipName').value;
+        validCount = zip.length;
+        // console.log(validCount);
+        if(validCount == 0 || validCount != 5) {
+            $('.alert_req6').css("display","block");
+            flag = true;
+        }
+        else {
+            $('.alert_req6').css("display","none");
+            flag = false;
+        }
+    }
+
+    function phoneNameChange() {
+        ph1 = document.getElementById('phoneName').value;
+        validCount = ph1.length;
+        // console.log(validCount);
+        if(validCount == 0 || validCount != 10) {
+            $('.alert_req7').css("display","block");
+            flag = true;
+        }
+        else {
+            $('.alert_req7').css("display","none");
+            flag = false;
+        }
+    }
+
+    function emailNameChange() {
+        email = document.getElementById('emailName').value;
+        validCount = email.length;
+        const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+        // console.log(expression.test(String(document.getElementById('emailName').value).toLowerCase()));
+        if(validCount == 0 || expression.test(String(document.getElementById('emailName').value).toLowerCase()) == false) {
+            $('.alert_req8').css("display","block");
+            flag = true;
+        }
+        else {
+            $('.alert_req8').css("display","none");
+            flag = false;
+        }
+    }
+
+    function descNameChange() {
+
+    }
+
+    function uuidv4() {
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+            (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        )
+    }
+
+    function submit_to() {
+        // console.log(sessionStorage.getItem("age"));
+        age = sessionStorage.getItem("age");
+        ad_querystring = window.location.search.substring(1);
+        url = window.location.href.split('?')[0];
+        mktrefid = uuidv4();
+        var params = {}, queries, temp;
+        queries = ad_querystring.split("&");
+        for ( i = 0; i < queries.length; i++ ) {
+            temp = queries[i].split('=');
+            params[temp[0]] = temp[1];
+        }
+
+        
+        firstNameChange();
+        lastNameChange();
+        zipNameChange();
+        phoneNameChange();
+        emailNameChange();
+        // flagCount = 0;
+        // if(flag = true) alert("ok");
+        if(document.getElementById('f_chk').checked && flag == false) {
+            // console.log(firstname, lastname, zip, ph1, email);
+            // console.log("firstname : ",firstname);
+            // console.log("lastname : ", lastname);
+            // console.log("zipcode : ", zip);
+            // console.log("ph1 : ", ph1);
+            // console.log("email : ", email);
+            // console.log(params);
+            // console.log("url : ",url);
+            // console.log("uuid : ", mktrefid);
+            // console.log("describe : ", document.getElementById('descName').value);
+
+            // if(localStorage.getItem("dqq") == "") {
+                apiUrl = "https://api.citizensdisability.com/op/lead";
+                disdesc = document.getElementById('descName').value;
+                $.getJSON('http://ipinfo.io', function(data){
+                    ip = data.ip;
+                });
+                // console.log(this.ip);
+                const data = {
+                    age : age,
+                    mktrefid: mktrefid,
+                    source: params['fsource'],
+                    firstname: this.firstname,
+                    lastname: this.lastname,
+                    email: email,
+                    disposition: "CPD",
+                    disdesc: disdesc,
+                    consent: "By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications",
+                    dqq: "",
+                    zip: zip,
+                    ph1: ph1,
+                    ip: this.ip,
+                    url: url,
+                    ad_querystring: ad_querystring,
+                    oppid: 12,
+                    wls: ""
+                }
+                $.extend(data, params);
+                // console.log(data);
+                // $.ajax({
+                //     url: apiUrl,
+                //     type: "POST",
+                //     success: function(result) {
+                //         console.log(result);
+                //     },
+                //     error: function(error) {
+                //         console.log("error");
+                //     }
+                // });
+            // }
+            // else {
+            //     apiUrl = "https://api.citizensdisability.com/lead";
+            // }
+            
+            // window.location.href="Home2.html";
+        }
+    }
+  </script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-info">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Home.html">CITIZEN DISABILITY</a>
+    </div>
+    <ul class="nav navbar-nav div_right">
+      <li class="active"><a href="Home.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Benifits.html">Benifits</a></li>
+      <li><a href="Application Process.html">Application Process</a></li>
+      <li><a href="Careers.html">Careers</a></li>
+      <li><a href="Contact Us.html">Contact Us</a></li>
+      <!-- <input type="text" placeholder="Search.." name="search"> -->
+      <button type="button"><i class="fa fa-search"></i></button>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <!-- <h3>Basic Navbar Example1</h3>
+  <p>A navigation bar is a navigation header that is placed at the top of the page.</p> -->
+  <form method="POST">
+    <!-- <div class="div_entire"> -->
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+      <input type="hidden" name="dqq" value="dqq">
+            
+      <div class="row"><h2 class="title">Find out if you qualify</h2></div>
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" onkeyup="firstNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req1">
+          <div class=" "></div>
+          <div class="alert alert-warning col-md-5 alert1 ">
+            This field is required.
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="lastName"  placeholder="Last Name" onkeyup="lastNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req2">
+          <div class=" "></div>
+          <div class="alert alert-warning col-md-5 alert2">
+            This field is required.
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row second_input addr" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="addrName"  placeholder="Address"  onkeyup="addrNameChange()"> 
+            </div>
+        </div>
+        <div class="row alert_req3">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert3">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input addr" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="cityName"  placeholder="City"  onkeyup="cityNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req4">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert4">
+            This field is required.
+            </div>
+        </div>
+      </div>
+      <div class="row second_input addr" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="stateName"  placeholder="State"  onkeyup="stateNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req5">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert5">
+            This field is required.
+            </div>
+        </div>
+      </div> -->
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="number" class="form-control" id="zipName" placeholder="Zip Code"   onkeyup="zipNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req6">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert6">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="number" class="form-control" id="phoneName"  placeholder="Phone"  onkeyup="phoneNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req7">
+          <div class=" "></div>
+          <div class="alert alert-warning col-md-5 alert7">
+            This field is required.
+          </div>
+        </div>
+      </div>
+      
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="email" class="form-control" id="emailName"  placeholder="Email" onkeyup="emailNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req8">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert8">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <textarea type="text" class="form-control" id="descName" placeholder="Describe Your Disability"  onkeyup="descNameChange()"></textarea>
+            </div>
+        </div>
+        <div class="row alert_req9">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert9">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input" >
+        <h5 class="h5_italic">accurate information is required for a free evaluation</h5>
+      </div>
+     
+      <div class="row">
+        <div class="col-md-7"></div>
+        <!-- <div class="col-md-4 btn_submit"><input type="submit" class="btn_sub btn btn-success" value="Next"></div> -->
+        <div class="col-md-4 btn_submit"><input type="button" class="btn_sub btn btn-success" value="Secure Evaluation" onclick="submit_to()"></div>
+      </div>
+      <div class="row div_flex">
+        <div><input type="checkbox" value="" id="f_chk"></div>
+        <div><label class="label_italic">By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications. I understand these communications may be generated using an autodialer and may contain pre-recorded messages and that consent is not required to utilize Citizens Disability Network’s services. I understand that this authorization overrides any previous registrations on a federal or state Do Not Call registry.</label></div>
+      </div>
+      
+      <!-- <input type="submit" value="Submit"> -->
+    <!-- </div> -->
+  </form>
+</div>
+
+</body>
+</html>
+
+<!-- 
+"mktrefid": "uuid",
+"source": "value of fsource from querystring",
+"firstname": "value entered in first name",
+"lastname": "value entered in last name",
+"zip": "value entered in zip zode",
+"ph1": "value entered in phone",
+"age": "age selected on form",
+"email": "email enetered on form",
+"disposition": "static value",
+"wls": "Value provided by citizens",
+"disdesc","Text entered from Describe Your Disability",
+"consent","By selecting this checkbox .....",
+"ip":"THE USER'S IP ADDRESS",
+"url":"URL OF THE FORM",
+"utm_campaign":"value parsed from querystring",
+"utm_content":"value parsed from querystring",
+"utm_source":"value parsed from querystring",
+"utm_term":"value parsed from querystring",
+"ad_querystring":"the querystring",
+"ad_group":"value parsed from querystring",
+"ad_keywords":"value parsed from querystring",
+"ad_keywords_match_type":"value parsed from querystring",
+"conversion_page":"value parsed from querystring",
+"gclid":"value parsed from querystring",
+"serp_position":"value parsed from querystring",
+"oppid":"12" -->

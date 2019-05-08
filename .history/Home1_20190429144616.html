@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CITIZEN DISABILITY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" type = "text/css" href = "./css/base1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    flagCount = 0;
+    function firstNameChange() {
+        validCount = document.getElementById('firstName').value.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req1').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req1').css("display","none");
+    }
+
+    function lastNameChange() {
+        validCount = document.getElementById('lastName').value.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req2').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req2').css("display","none");
+    }
+
+    function addrNameChange() {
+        validCount = document.getElementById('addrName').value.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req3').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req3').css("display","none");
+    }
+
+    function cityNameChange() {
+        validCount = document.getElementById('cityName').value.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req4').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req4').css("display","none");
+    }
+
+    function stateNameChange() {
+        validCount = document.getElementById('stateName').value.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req5').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req5').css("display","none");
+    }
+
+    function zipNameChange() {
+        validCount = document.getElementById('zipName').value.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req6').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req6').css("display","none");
+    }
+
+    function phoneNameChange() {
+        validCount = document.getElementById('phoneName').value.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req7').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req7').css("display","none");
+    }
+
+    function emailNameChange() {
+        validCount = document.getElementById('emailName').value.length;
+        const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+        // console.log(expression.test(String(document.getElementById('emailName').value).toLowerCase()));
+        if(validCount == 0 || expression.test(String(document.getElementById('emailName').value).toLowerCase()) == false) {
+            $('.alert_req8').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req8').css("display","none");
+    }
+
+    function descNameChange() {
+        validCount = document.getElementById('descName').value.length;
+        // console.log(validCount);
+        if(validCount == 0) {
+            $('.alert_req9').css("display","block");
+            flagCount ++;
+        }
+        else $('.alert_req9').css("display","none");
+    }
+
+    function zipOut() {
+        // console.log("focus_out");
+        validCount = document.getElementById('descName').value.length;
+        if(validCount == 5) {
+            $('.addr').css('display','block');
+        }
+    }
+
+    function submit_to() {
+        flagCount = 0;
+        console.log("submit");
+    }
+  </script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-info">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Home.html">CITIZEN DISABILITY</a>
+    </div>
+    <ul class="nav navbar-nav div_right">
+      <li class="active"><a href="Home.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Benifits.html">Benifits</a></li>
+      <li><a href="Application Process.html">Application Process</a></li>
+      <li><a href="Careers.html">Careers</a></li>
+      <li><a href="Contact Us.html">Contact Us</a></li>
+      <!-- <input type="text" placeholder="Search.." name="search"> -->
+      <button type="button"><i class="fa fa-search"></i></button>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <!-- <h3>Basic Navbar Example1</h3>
+  <p>A navigation bar is a navigation header that is placed at the top of the page.</p> -->
+  <form method="POST">
+    <!-- <div class="div_entire"> -->
+      <div class="row"><h2 class="title">Find out if you qualify</h2></div>
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" onkeyup="firstNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req1">
+          <div class=" "></div>
+          <div class="alert alert-warning col-md-5 alert1 ">
+            This field is required.
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="lastName"  placeholder="Last Name" onkeyup="lastNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req2">
+          <div class=" "></div>
+          <div class="alert alert-warning col-md-5 alert2">
+            This field is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="row second_input addr" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="addrName"  placeholder="Address"  onkeyup="addrNameChange()"> 
+            </div>
+        </div>
+        <div class="row alert_req3">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert3">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input addr" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="cityName"  placeholder="City"  onkeyup="cityNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req4">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert4">
+            This field is required.
+            </div>
+        </div>
+      </div>
+      <div class="row second_input addr" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="stateName"  placeholder="State"  onkeyup="stateNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req5">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert5">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="number" class="form-control" id="zipName" placeholder="Zip Code"  onfocusout="zipOut()" onkeyup="zipNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req6">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert6">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="number" class="form-control" id="phoneName"  placeholder="Phone"  onkeyup="phoneNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req7">
+          <div class=" "></div>
+          <div class="alert alert-warning col-md-5 alert7">
+            This field is required.
+          </div>
+        </div>
+      </div>
+      
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <input type="email" class="form-control" id="emailName"  placeholder="Email" onkeyup="emailNameChange()">
+            </div>
+        </div>
+        <div class="row alert_req8">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert8">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input" >
+        <div class="row form-group">
+            <div class="col-md-9">
+                <textarea type="text" class="form-control" id="descName" placeholder="Describe Your Disability"  onkeyup="descNameChange()"></textarea>
+            </div>
+        </div>
+        <div class="row alert_req9">
+            <div class=" "></div>
+            <div class="alert alert-warning col-md-5 alert9">
+            This field is required.
+            </div>
+        </div>
+      </div>
+
+      <div class="row second_input" >
+        <h5 class="h5_italic">accurate information is required for a free evaluation</h5>
+      </div>
+     
+      <div class="row">
+        <div class="col-md-7"></div>
+        <!-- <div class="col-md-4 btn_submit"><input type="submit" class="btn_sub btn btn-success" value="Next"></div> -->
+        <div class="col-md-4 btn_submit"><input type="button" class="btn_sub btn btn-success" value="Secure Evaluation" onclick="submit_to()"></div>
+      </div>
+      <div class="row div_flex">
+        <div><input type="checkbox" value="" class="f_chk"></div>
+        <div><label class="label_italic">By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications. I understand these communications may be generated using an autodialer and may contain pre-recorded messages and that consent is not required to utilize Citizens Disability Network’s services. I understand that this authorization overrides any previous registrations on a federal or state Do Not Call registry.</label></div>
+      </div>
+      
+      <!-- <input type="submit" value="Submit"> -->
+    <!-- </div> -->
+  </form>
+</div>
+
+</body>
+</html>

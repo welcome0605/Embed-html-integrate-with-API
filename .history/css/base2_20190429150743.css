@@ -1,0 +1,35 @@
+/* body {
+    font-family: 'Open Sans', sans-serif !important;
+} */
+
+navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    background-color: #005197 !important;
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+    font-size: 20px;
+}
+
+.div_right {
+    float: right;
+}
+
+.radio_buttons {
+    /* display: inline-flex; */
+    margin-bottom:30px;
+}
+
+.div_label {
+    font-size: 20px;
+    /* margin-right: 500px; */
+}
+
+.title {
+    color: #005197;
+    font-weight: 700;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
