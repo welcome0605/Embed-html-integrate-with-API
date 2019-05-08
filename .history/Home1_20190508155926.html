@@ -197,7 +197,7 @@
                     firstname: this.firstname,
                     lastname: this.lastname,
                     email: email,
-                    disposition: 'IN5',
+                    disposition: disposition,
                     disdesc: disdesc,
                     consent: "By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications",
                     dqq: localStorage.getItem("dqq"),
@@ -219,11 +219,11 @@
 
                   type: 'POST',
 
-                  // dataType:"json",
+                  dataType:"json",
 
-                  data: {lead : data},
+                  data: JSON.stringify(dataTo),
 
-                  // contentType: 'application/json; charset=utf-8',
+                  contentType: 'application/json; charset=utf-8',
 
                   success: function (data) {
 
