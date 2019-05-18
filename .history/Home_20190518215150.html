@@ -101,14 +101,14 @@
         str += '&age=' + age + '&mktrefid=' + mktrefid + '&ip=' + ip + '&wls=' + 'Citizens-new-form';
         // console.log(str);
         if(this.dqq == "") {
-          str += '&disposition=' + 'CPD' + '&dqq=' + dqq + '&oppid=' + '12';
+          str += '&disposition=' + 'CPD' + '&oppid=' + '12';
 
         }
         else {
           str += '&disposition=' + 'IN5' + '&dqq=' + dqq + '&refid=' + mktrefid + '&ccname=' + 'FORM' + '&numdialed=' + '9999999999';
         }
         ad_querystring += str;
-        // console.log(ad_querystring);
+        console.log(ad_querystring);
         // console.log(ad_querystring);//
         window.location.href="Home1.html?"+ad_querystring;
       }

@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script>
     var ip="", url, wls, oppid, mktrefid, age, dqq;
-
     $.getJSON('http://ipinfo.io', function(data){
       ip = data.ip;
       // console.log(ip);
@@ -22,10 +21,9 @@
         )
     }
     function submit_to() {
-      var dataTo={};
       count = 0;
-      dqq = "";
-      age = "";
+      var dqq = "";
+      var age;
       // console.log($('input[name=valid1]:checked').length);
       if ($('input[name=valid1]:checked').length == 1) {
         $('.alert_req1').css("display","none");
@@ -83,7 +81,6 @@
       if(count == 6) 
       {
         // localStorage.setItem("dqq", dqq);
-        ad_querystring = window.location.search.substring(1);
         wls = "Citizens-new-form";
         oppid = 12;
         // console.log(dqq,age);//
@@ -96,21 +93,35 @@
             temp = queries[i].split('=');
             params[temp[0]] = temp[1];
         }
-        // console.log(this.dqq);
-        str = "";
-        str += '&age=' + age + '&mktrefid=' + mktrefid + '&ip=' + ip + '&wls=' + 'Citizens-new-form';
-        // console.log(str);
-        if(this.dqq == "") {
-          str += '&disposition=' + 'CPD' + '&dqq=' + dqq + '&oppid=' + '12';
-
+        if(dqq = "") {
+          const dataTo = {
+            age : age,
+            mktrefid: mktrefid,
+            disposition: 'CPD',
+            dqq: "",
+            ip: this.ip,
+            url: url,
+            oppid: 12,
+            wls: "Citizens-new-form"
+          }
         }
         else {
-          str += '&disposition=' + 'IN5' + '&dqq=' + dqq + '&refid=' + mktrefid + '&ccname=' + 'FORM' + '&numdialed=' + '9999999999';
+          const dataTo = {
+            age : age,
+            refid : mktrefid,
+            mktrefid: mktrefid,
+            disposition: 'CPD',
+            dqq: "",
+            ip: this.ip,
+            url: url,
+            ccname : "FORM",
+            numdialed:"9999999999"
+            wls: "Citizens-new-form"
+          }
         }
-        ad_querystring += str;
-        // console.log(ad_querystring);
-        // console.log(ad_querystring);//
-        window.location.href="Home1.html?"+ad_querystring;
+        $.extend(dataTo, params);
+        console.log(dataTo);//
+        // window.location.href="Home1.html";
       }
     }
 

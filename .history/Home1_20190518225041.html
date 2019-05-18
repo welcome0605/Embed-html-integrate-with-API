@@ -99,7 +99,7 @@
         disdesc = document.getElementById('descName').value;
         ad_querystring = window.location.search.substring(1);
         url = window.location.href.split('?')[0];
-          console.log(ad_querystring);
+          console.log(url);
         var params = {}, queries, temp;
         queries = ad_querystring.split("&");
         for ( i = 0; i < queries.length; i++ ) {
@@ -126,7 +126,7 @@
         }
         $.extend(dataTo, params);
         var data = JSON.stringify(dataTo);
-        // console.log(data);
+        console.log(data);
         firstNameChange();
         lastNameChange();
         zipNameChange();
@@ -142,10 +142,8 @@
             data: {lead : data},
 
             success: function (data) {
-              // console.log(data);
-              ad_querystring += '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email + '&disdesc=' + disdesc + '&zip=' + zip + '&ph1=' + ph1;
-              window.location.href="Home2.html?"+ad_querystring;
-             },
+              console.log(data);
+            },
 
           });
         }

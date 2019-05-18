@@ -10,22 +10,10 @@
   <link rel = "stylesheet" type = "text/css" href = "./css/base.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script>
-    var ip="", url, wls, oppid, mktrefid, age, dqq;
-
-    $.getJSON('http://ipinfo.io', function(data){
-      ip = data.ip;
-      // console.log(ip);
-    });
-    function uuidv4() {
-        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-            (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-        )
-    }
     function submit_to() {
-      var dataTo={};
       count = 0;
-      dqq = "";
-      age = "";
+      var dqq = "";
+      var age;
       // console.log($('input[name=valid1]:checked').length);
       if ($('input[name=valid1]:checked').length == 1) {
         $('.alert_req1').css("display","none");
@@ -83,34 +71,17 @@
       if(count == 6) 
       {
         // localStorage.setItem("dqq", dqq);
+        console.log(dqq,age);
         ad_querystring = window.location.search.substring(1);
-        wls = "Citizens-new-form";
-        oppid = 12;
-        // console.log(dqq,age);//
         url = window.location.href.split('?')[0];
-        mktrefid = uuidv4();//
-        // console.log(mktrefid);
+        mktrefid = uuidv4();
         var params = {}, queries, temp;
         queries = ad_querystring.split("&");
         for ( i = 0; i < queries.length; i++ ) {
             temp = queries[i].split('=');
             params[temp[0]] = temp[1];
         }
-        // console.log(this.dqq);
-        str = "";
-        str += '&age=' + age + '&mktrefid=' + mktrefid + '&ip=' + ip + '&wls=' + 'Citizens-new-form';
-        // console.log(str);
-        if(this.dqq == "") {
-          str += '&disposition=' + 'CPD' + '&dqq=' + dqq + '&oppid=' + '12';
-
-        }
-        else {
-          str += '&disposition=' + 'IN5' + '&dqq=' + dqq + '&refid=' + mktrefid + '&ccname=' + 'FORM' + '&numdialed=' + '9999999999';
-        }
-        ad_querystring += str;
-        // console.log(ad_querystring);
-        // console.log(ad_querystring);//
-        window.location.href="Home1.html?"+ad_querystring;
+        // window.location.href="Home1.html";
       }
     }
 

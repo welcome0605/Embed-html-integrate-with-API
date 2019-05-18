@@ -99,18 +99,31 @@
         // console.log(this.dqq);
         str = "";
         str += '&age=' + age + '&mktrefid=' + mktrefid + '&ip=' + ip + '&wls=' + 'Citizens-new-form';
-        // console.log(str);
+        console.log(str);
         if(this.dqq == "") {
           str += '&disposition=' + 'CPD' + '&dqq=' + dqq + '&oppid=' + '12';
-
+          console.log(str);
         }
         else {
-          str += '&disposition=' + 'IN5' + '&dqq=' + dqq + '&refid=' + mktrefid + '&ccname=' + 'FORM' + '&numdialed=' + '9999999999';
+          str += '&disposition=' + 'IN5' + '&dqq=' + dqq + '&oppid=' + '12';
+          // alert("dqq");
+          dataTo = {
+            age : age,
+            refid : mktrefid,
+            mktrefid: mktrefid,
+            disposition: 'IN5',
+            dqq: dqq,
+            ip: this.ip,
+            url: url,
+            ccname : "FORM",
+            numdialed:"9999999999",
+            wls: "Citizens-new-form"
+          }
+          // $.extend(params, dataTo);
         }
-        ad_querystring += str;
-        // console.log(ad_querystring);
+
         // console.log(ad_querystring);//
-        window.location.href="Home1.html?"+ad_querystring;
+        // window.location.href="Home1.html?"+ad_querystring;
       }
     }
 

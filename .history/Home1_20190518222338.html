@@ -99,56 +99,133 @@
         disdesc = document.getElementById('descName').value;
         ad_querystring = window.location.search.substring(1);
         url = window.location.href.split('?')[0];
-          console.log(ad_querystring);
         var params = {}, queries, temp;
         queries = ad_querystring.split("&");
         for ( i = 0; i < queries.length; i++ ) {
             temp = queries[i].split('=');
             params[temp[0]] = temp[1];
         }
-        if(params['dqq'] == "") {
-          apiUrl = "https://2019-05-07-fps-01-dot-citizensleadapi.appspot.com/op/lead";
-        }
-        else {
-          apiUrl = "https://2019-05-07-fps-01-dot-citizensleadapi.appspot.com/lead";
-        }
+        if(params['dqq']);
         const dataTo = {
             firstname: this.firstname,
             lastname: this.lastname,
-            source: params['fsource'],
             email: email,
             disdesc: disdesc,
-            ad_querystring : ad_querystring,
             consent: "By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications",
             zip: zip,
             ph1: ph1,
-            url: url
         }
-        $.extend(dataTo, params);
-        var data = JSON.stringify(dataTo);
-        // console.log(data);
+        
         firstNameChange();
         lastNameChange();
         zipNameChange();
         phoneNameChange();
         emailNameChange();
-        if(document.getElementById('f_chk').checked && flag == false) {
-          $.ajax({
 
-            url : apiUrl,
+        // if(document.getElementById('f_chk').checked && flag == false) {
 
-            type: 'POST',
+        //     disdesc = document.getElementById('descName').value;
+        //     if(localStorage.getItem("dqq") == "") {
+        //         apiUrl = "https://2019-05-07-fps-01-dot-citizensleadapi.appspot.com/op/lead";
+                
 
-            data: {lead : data},
+        //         // console.log(this.ipAddr);
+        //         const dataTo = {
+        //             age : age,
+        //             mktrefid: mktrefid,
+        //             source: params['fsource'],
+        //             firstname: this.firstname,
+        //             lastname: this.lastname,
+        //             email: email,
+        //             disposition: 'ORD',
+        //             disdesc: disdesc,
+        //             consent: "By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications",
+        //             dqq: "",
+        //             zip: zip,
+        //             ph1: ph1,
+        //             ip: this.ip,
+        //             url: url,
+        //             ad_querystring: ad_querystring,
+        //             oppid: 12,
+        //             wls: "Citizens-new-form"
+        //         }
+        //         $.extend(dataTo, params);
+        //         var data = JSON.stringify(dataTo);
+        //         // console.log(data);
+        //         $.ajax({
 
-            success: function (data) {
-              // console.log(data);
-              ad_querystring += '&firstname=' + firstname + '&lastname=' + lastname + '&email=' + email + '&disdesc=' + disdesc + '&zip=' + zip + '&ph1=' + ph1;
-              window.location.href="Home2.html?"+ad_querystring;
-             },
+        //           // url: './php/backend.php',
+        //           url : apiUrl,
 
-          });
-        }
+        //           type: 'POST',
+
+        //           // dataType:"json",
+
+        //           data: {lead : data},
+
+        //           // contentType: 'application/json; charset=utf-8',
+
+        //           success: function (data) {
+
+        //             // alert(data);
+        //             console.log(data);
+
+        //           },
+
+        //         });
+        
+
+        //     }
+        //     else {
+        //         apiUrl = "https://2019-05-07-fps-01-dot-citizensleadapi.appspot.com/lead";
+        //         const dataTo = {
+        //             refid : mktrefid,
+        //             age : age,
+        //             mktrefid: mktrefid,
+        //             source: params['fsource'],
+        //             firstname: this.firstname,
+        //             lastname: this.lastname,
+        //             email: email,
+        //             disposition: 'IN5',
+        //             disdesc: disdesc,
+        //             consent: "By selecting this check box, I confirm that I have read and agree to the privacy policy of this site and that I consent to receive emails, phone calls and/or text message offers and communications from Citizens Disability Network, National Disability, and its network of lawyers and advocates at any telephone number or email address provided by me, including my wireless number, if provided. I understand there may be a charge by my wireless carrier for such communications",
+        //             dqq: localStorage.getItem("dqq"),
+        //             zip: zip,
+        //             ph1: ph1,
+        //             ip: this.ip,
+        //             url: url,
+        //             ad_querystring: ad_querystring,
+        //             wls: "Citizens-new-form",
+        //             ccname:"FORM",
+        //             numdialed:9999999999
+        //         }
+        //         $.extend(dataTo, params);
+        //         var data = JSON.stringify(dataTo);
+        //         $.ajax({
+
+        //           // url: './php/backend.php',
+        //           url : apiUrl,
+
+        //           type: 'POST',
+
+        //           // dataType:"json",
+
+        //           data: {lead : data},
+
+        //           // contentType: 'application/json; charset=utf-8',
+
+        //           success: function (data) {
+
+        //             // alert(data);
+        //             console.log(data);
+
+        //           },
+
+        //         });
+        //     }
+            
+        //     // window.location.href="Home2.html";
+        // }
     }
     
   </script>
